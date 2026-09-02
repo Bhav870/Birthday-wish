@@ -1,0 +1,295 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>For Navya 🌸</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,600;1,9..144,500&family=Caveat:wght@500;700&family=Nunito:wght@400;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<button class="music-toggle playing" id="musicToggle" aria-label="Pause Happy Birthday song" aria-pressed="true">🔊</button>
+<iframe
+  id="birthdayMusic"
+  title="Happy Birthday song"
+  src="https://www.youtube.com/embed/z8e5IYh1fn4?autoplay=1&controls=0&loop=1&playlist=z8e5IYh1fn4&playsinline=1&enablejsapi=1"
+  allow="autoplay; encrypted-media"
+  aria-hidden="true"
+  tabindex="-1"
+  class="birthday-music">
+</iframe>
+
+<div class="backdrop"></div>
+<svg class="doodle doodle-left" viewBox="0 0 100 100"><path d="M50 90 C20 70 20 30 50 20 C80 30 80 70 50 90 Z" fill="none" stroke="#C9A6B8" stroke-width="2"/></svg>
+<svg class="doodle doodle-right" viewBox="0 0 100 100"><circle cx="50" cy="50" r="6" fill="#D4A94C"/><g stroke="#8FA986" stroke-width="2" fill="none"><path d="M50 44 C40 30 30 30 25 40"/><path d="M56 44 C66 30 76 30 81 40"/><path d="M50 56 C40 70 30 70 25 60"/><path d="M56 56 C66 70 76 70 81 60"/></g></svg>
+
+<main class="stage">
+  <div class="birthday-logo" aria-label="Birthday logo for Navya">
+    <span class="logo-mark" aria-hidden="true">🎂</span>
+    <span class="logo-text"><strong>HBD</strong>NAVYA</span>
+  </div>
+  <div class="eyebrow">a little something for</div>
+  <h1 class="title">Navya</h1>
+
+  <div class="envelope-wrap" id="envelope" tabindex="0" role="button" aria-label="Open envelope to reveal birthday message">
+    <div class="env-back"></div>
+    <div class="letter">
+      <div class="letter-inner" id="letterText"></div>
+    </div>
+    <div class="env-pocket"></div>
+    <div class="env-flap"></div>
+    <div class="seal">✦</div>
+  </div>
+
+  <p class="hint">tap the envelope to open ✨</p>
+
+  <div class="reveal" id="reveal">
+    <div class="card-kicker">a royal birthday wish</div>
+    <h2>Happy Birthday,<br><span class="card-name">Navya</span>! 🎂</h2>
+    <div class="card-divider"></div>
+    <p>
+      Happy birthday to my favourite drama queen! I hope your day is packed
+      with cake, laughter, silly moments, and all your favourite people. Keep
+      being your wonderfully chaotic self, keep chasing those big dreams, and
+      never forget how loved you are. Now make a wish and save me some cake!
+    </p>
+    <div class="signature">with love, always 💛</div>
+
+    <button class="cake-button" id="cakeButton" type="button" aria-label="Cut the birthday cake" aria-pressed="false">
+      <span class="cake-visual" aria-hidden="true">
+        <span class="cake-crown"></span>
+        <span class="cake-candle"></span>
+        <span class="cake-flame"></span>
+        <span class="cake-half cake-left"></span>
+        <span class="cake-half cake-right"></span>
+        <span class="cake-plate"></span>
+      </span>
+      <span class="cake-label" id="cakeLabel">tap the cake to cut it 🎂</span>
+    </button>
+
+    <div class="gallery">
+      <div class="polaroid polaroid-left">
+        <img class="frame gallery-image" src="photo1.jpg" alt="That day out" tabindex="0" role="button" />
+        <div class="cap">that day out</div>
+      </div>
+      <div class="polaroid polaroid-right">
+        <img class="frame gallery-image" src="photo3.jpg" alt="The good times" tabindex="0" role="button" />
+        <div class="cap">the good times</div>
+      </div>
+      <div class="polaroid polaroid-center">
+        <img class="frame gallery-image" src="photo2.jpg" alt="Us, always" tabindex="0" role="button" />
+        <div class="cap">us, always</div>
+      </div>
+    </div>
+
+    <div class="lightbox" id="lightbox" hidden>
+      <button class="lightbox-close" id="lightboxClose" type="button" aria-label="Close enlarged photo">×</button>
+      <img id="lightboxImage" alt="" />
+    </div>
+
+    <div class="wish-pages" id="wishPages">
+      <section class="wish-page active" data-page="0">
+        <div class="page-number">page 1 of 3</div>
+        <h3>One more little thing...</h3>
+        <p>Because one birthday message could never fit all the love, laughter, and nonsense that comes with being sisters.</p>
+      </section>
+      <section class="wish-page" data-page="1">
+        <div class="page-number">page 2 of 3</div>
+        <h3>To my forever person</h3>
+        <div class="sister-letter">
+          Dear sister, thank you for being my built-in best friend, my favourite person to annoy, and the one who always makes ordinary days feel special. No matter how much we tease each other, you will always have my whole heart. <strong>Love you endlessly.</strong>
+        </div>
+      </section>
+      <section class="wish-page" data-page="2">
+        <div class="page-number">page 3 of 3</div>
+        <h3>Our sister promises</h3>
+        <div class="promise-list">
+          <div class="promise"><span>✦</span> More late-night talks and shared secrets</div>
+          <div class="promise"><span>✦</span> More laughing until our stomachs hurt</div>
+          <div class="promise"><span>✦</span> More adventures we pretend are planned</div>
+          <div class="promise"><span>✦</span> Always choosing each other, every time</div>
+        </div>
+      </section>
+      <div class="page-nav" aria-label="Birthday card pages">
+        <button type="button" id="previousPage" disabled>← Previous</button>
+        <span class="page-dots" id="pageDots" aria-live="polite">● ○ ○</span>
+        <button type="button" id="nextPage">Next →</button>
+      </div>
+    </div>
+  </div>
+</main>
+
+<script>
+const wrap = document.getElementById('envelope');
+const reveal = document.getElementById('reveal');
+const letterText = document.getElementById('letterText');
+const cakeButton = document.getElementById('cakeButton');
+const cakeLabel = document.getElementById('cakeLabel');
+const wishPages = [...document.querySelectorAll('.wish-page')];
+const previousPage = document.getElementById('previousPage');
+const nextPage = document.getElementById('nextPage');
+const pageDots = document.getElementById('pageDots');
+const galleryImages = [...document.querySelectorAll('.gallery-image')];
+const lightbox = document.getElementById('lightbox');
+const lightboxImage = document.getElementById('lightboxImage');
+const lightboxClose = document.getElementById('lightboxClose');
+let currentPage = 0;
+letterText.textContent = "Dear Navya, sending you all my warmest wishes today...";
+
+function openEnvelope(){
+  if(wrap.classList.contains('open')) return;
+  wrap.classList.add('open');
+  reveal.classList.add('show');
+  sendMusicCommand('playVideo');
+  musicPlaying = true;
+  musicBtn.textContent = '🔊';
+  musicBtn.classList.add('playing');
+  musicBtn.setAttribute('aria-pressed','true');
+  burstPetals();
+}
+
+wrap.addEventListener('click', openEnvelope);
+wrap.addEventListener('keydown', (e)=>{
+  if(e.key === 'Enter' || e.key === ' '){ e.preventDefault(); openEnvelope(); }
+});
+
+cakeButton.addEventListener('click', ()=>{
+  const isCut = cakeButton.classList.toggle('cut');
+  cakeButton.setAttribute('aria-pressed', String(isCut));
+  cakeLabel.textContent = isCut ? 'cake cut! make a wish ✨' : 'tap the cake to cut it 🎂';
+  if(isCut) playCakeSound();
+});
+
+let cakeAudio;
+function playCakeSound(){
+  cakeAudio = cakeAudio || new (window.AudioContext || window.webkitAudioContext)();
+  const now = cakeAudio.currentTime;
+  [523.25, 659.25, 783.99].forEach((frequency, index)=>{
+    const oscillator = cakeAudio.createOscillator();
+    const gain = cakeAudio.createGain();
+    oscillator.type = 'triangle';
+    oscillator.frequency.value = frequency;
+    gain.gain.setValueAtTime(0.0001, now + index * 0.09);
+    gain.gain.exponentialRampToValueAtTime(0.16, now + index * 0.09 + 0.02);
+    gain.gain.exponentialRampToValueAtTime(0.0001, now + index * 0.09 + 0.32);
+    oscillator.connect(gain).connect(cakeAudio.destination);
+    oscillator.start(now + index * 0.09);
+    oscillator.stop(now + index * 0.09 + 0.34);
+  });
+}
+
+function openLightbox(image){
+  lightboxImage.src = image.src;
+  lightboxImage.alt = image.alt;
+  lightbox.hidden = false;
+  document.body.classList.add('lightbox-open');
+  lightboxClose.focus();
+}
+
+function closeLightbox(){
+  lightbox.hidden = true;
+  document.body.classList.remove('lightbox-open');
+}
+
+galleryImages.forEach((image)=>{
+  image.addEventListener('click', ()=>openLightbox(image));
+  image.addEventListener('keydown', (event)=>{
+    if(event.key === 'Enter' || event.key === ' '){
+      event.preventDefault();
+      openLightbox(image);
+    }
+  });
+});
+lightboxClose.addEventListener('click', closeLightbox);
+lightbox.addEventListener('click', (event)=>{
+  if(event.target === lightbox) closeLightbox();
+});
+document.addEventListener('keydown', (event)=>{
+  if(event.key === 'Escape' && !lightbox.hidden) closeLightbox();
+});
+
+function showPage(pageIndex){
+  currentPage = pageIndex;
+  wishPages.forEach((page, index)=>page.classList.toggle('active', index === currentPage));
+  previousPage.disabled = currentPage === 0;
+  nextPage.disabled = currentPage === wishPages.length - 1;
+  pageDots.textContent = wishPages.map((page, index)=>index === currentPage ? '●' : '○').join(' ');
+}
+
+previousPage.addEventListener('click', ()=>showPage(currentPage - 1));
+nextPage.addEventListener('click', ()=>showPage(currentPage + 1));
+
+/* ---- Balloons ---- */
+const balloonColors = ['#E38B6B','#D4A94C','#8FA986','#C9A6B8','#4A2545'];
+function spawnBalloon(){
+  const b = document.createElement('div');
+  b.className = 'balloon';
+  const size = 40 + Math.random()*22;
+  b.style.width = size+'px';
+  b.style.height = (size*1.25)+'px';
+  b.style.left = Math.random()*94+'vw';
+  b.style.background = balloonColors[Math.floor(Math.random()*balloonColors.length)];
+  document.body.appendChild(b);
+  const duration = 9000+Math.random()*6000;
+  const sway = 40+Math.random()*40;
+  b.animate([
+    { transform:'translate(0,0) rotate(0deg)' },
+    { transform:`translate(${sway}px,-45vh) rotate(6deg)` },
+    { transform:`translate(${-sway}px,-95vh) rotate(-6deg)` },
+    { transform:`translate(0,-130vh) rotate(0deg)`, opacity:0.9 }
+  ], { duration, easing:'ease-in-out' });
+  setTimeout(()=>b.remove(), duration+100);
+}
+setInterval(spawnBalloon, 2200);
+spawnBalloon();
+
+/* ---- Happy Birthday music ---- */
+let musicPlaying = true;
+const musicBtn = document.getElementById('musicToggle');
+const musicFrame = document.getElementById('birthdayMusic');
+
+function sendMusicCommand(command){
+  musicFrame.contentWindow.postMessage(JSON.stringify({ event:'command', func:command, args:[] }), '*');
+}
+
+musicBtn.addEventListener('click', ()=>{
+  if(musicPlaying){
+    sendMusicCommand('pauseVideo');
+    musicPlaying = false;
+    musicBtn.textContent = '🔇';
+    musicBtn.classList.remove('playing');
+    musicBtn.setAttribute('aria-pressed','false');
+  } else {
+    sendMusicCommand('playVideo');
+    musicPlaying = true;
+    musicBtn.textContent = '🔊';
+    musicBtn.classList.add('playing');
+    musicBtn.setAttribute('aria-pressed','true');
+  }
+});
+
+function burstPetals(){
+  const emojis = ['🌸','✨','🎈','🌼','💐'];
+  for(let i=0;i<26;i++){
+    setTimeout(()=>{
+      const p = document.createElement('div');
+      p.className='petal';
+      p.textContent = emojis[Math.floor(Math.random()*emojis.length)];
+      p.style.left = Math.random()*100+'vw';
+      p.style.fontSize = (14+Math.random()*14)+'px';
+      document.body.appendChild(p);
+      const duration = 3200+Math.random()*1800;
+      const drift = (Math.random()-0.5)*160;
+      p.animate([
+        { transform:'translate(0,-40px) rotate(0deg)', opacity:1 },
+        { transform:`translate(${drift}px, 100vh) rotate(${360+Math.random()*360}deg)`, opacity:0.9 }
+      ], { duration, easing:'cubic-bezier(.3,.6,.6,1)' });
+      setTimeout(()=>p.remove(), duration+100);
+    }, i*90);
+  }
+}
+</script>
+</body>
+</html>
