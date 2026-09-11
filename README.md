@@ -1,4 +1,4 @@
-# Birthday Wish
+# Birthday Wish 🎉🎉
 
 An interactive birthday greeting page made with HTML and CSS.
 
