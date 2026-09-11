@@ -1,6 +1,6 @@
 # Birthday Wish
 
-An interactive birthday greeting page made with HTML, CSS, and vanilla JavaScript.
+An interactive birthday greeting page made with HTML and CSS.
 
 ## Features
 
